@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from 'actions'; // imports all actions in index.js in actions folder
 
-export default class CommentBox extends Component {
+class CommentBox extends Component {
   state = { comment: '' };
 
   handleChange = event => {
@@ -14,6 +16,7 @@ export default class CommentBox extends Component {
 
     // save the comment
     // clear the comment box
+    this.props.saveComment(this.state.comment);
     this.setState({ comment: '' });
   };
 
@@ -34,3 +37,9 @@ export default class CommentBox extends Component {
     );
   }
 }
+
+// makes all actions accessible on this.props.
+export default connect(
+  null,
+  actions
+)(CommentBox);

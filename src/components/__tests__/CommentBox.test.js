@@ -19,7 +19,7 @@ afterEach(() => {
 
 it('has a text area and a button', () => {
   expect(wrapped.find('textarea').length).toEqual(1);
-  expect(wrapped.find('button').length).toEqual(1);
+  expect(wrapped.find('button').length).toEqual(2);
 });
 
 // a describe block wraps tests to provide a place for common setup, and limits the scope of beforeEach() etc

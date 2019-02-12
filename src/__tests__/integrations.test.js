@@ -28,7 +28,7 @@ it('can fetch a list of comments and display them', done => {
   // setTimeout(() => {
   // we don't know exactly how long it is going to take though, so rather than a
   // specific wait, moxios exposes a method to wait on it to return.
-  moxios.wait(() =>
+  moxios.wait(() => {
     // have to force an update for the component to actually show the lis
     wrapped.update();
     // expect to find a list of comments.

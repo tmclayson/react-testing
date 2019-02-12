@@ -33,7 +33,7 @@ export default ChildComponent => {
     return { auth: state.auth };
   }
 
-  return connect(mapStateToProps)[ComposedComponent];
+  return connect(mapStateToProps)(ComposedComponent);
 };
 
 // import React from 'react';
